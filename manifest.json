@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Github Status Check Notifier",
+  "description": "Sends notifications when Github status check are completed",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://git.innova-partners.com/*/*/pull/*"
+      ],
+      "js": ["jquery-3.2.1.min.js", "content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "notifications"
+  ]
+}
